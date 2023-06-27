@@ -1,0 +1,129 @@
+GET http://localhost:3000/api/filme
+
+###
+GET http://localhost:3000/api/filme/tt10366206
+
+###
+
+GET http://localhost:3000/api/seriale
+
+###
+
+GET http://localhost:3000/api/utilizatori
+
+###
+
+GET http://localhost:3000/api/utilizatori/10
+
+###
+POST http://localhost:3000/api/utilizatori
+content-type: application/json
+
+{
+  "Nume_utilizator":"robert_enache",
+  "Parola":"parolarobert",
+  "Nume":"Enache",
+  "Prenume":"Robert",
+  "Email":"robert_enache@email.ro",
+  "Avatar" :"avatar"
+}
+
+###
+PUT http://localhost:3000/api/utilizatori/1
+content-type: application/json
+
+{
+  "Nume_utilizator":"robert_enache_1"
+}
+
+###
+DELETE http://localhost:3000/api/utilizatori/1
+
+###
+POST http://localhost:3000/api/vizionari
+content-type: application/json
+
+{
+  "ID_Utilizator":12,
+  "ID_Episod": "tt0508111",
+  "Data_vizionare":"2023-6-19",
+  "Vazut_complet":true,
+  "Preferat":false
+}
+
+###
+PUT http://localhost:3000/api/vizionari/17
+content-type: application/json
+
+{
+"ID_Serial":"tt0047708"
+}
+
+
+
+###
+GET http://localhost:3000/api/vizionari
+
+###
+GET http://localhost:3000/api/utilizatori/getByEmail/robenache@email.ro
+
+###
+
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "email":"test_test@mail.ro",
+  "password": "qwertyu"
+}
+
+###
+GET http://localhost:3000/api/getUserByToken
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJpYXQiOjE2ODU3MzI1MTgsImV4cCI6MTY4NTczNjExOH0.72FjmoqrlBBLwtvOAL7DVKZ8soevH16Xd2gEhZ8UTi8
+
+
+###
+GET http://localhost:3000/api/vizionari/getByUserID/12
+
+###
+GET http://localhost:3000/api/filme/tt6791350
+
+###
+GET http://localhost:3000/api/seriale/tt11198330
+
+
+###
+PUT http://localhost:3000/api/vizionari/updateByMovieID/10/tt0068646
+content-type: application/json
+
+{
+  "Preferat":true
+}
+
+###
+GET http://localhost:3000/api/seriale/tt0047708/episoade
+
+###
+DELETE http://localhost:3000/api/vizionari/deleteBySerialID/tt2861424
+
+###
+POST http://localhost:3000/api/vizionari/serial 
+content-type: application/json
+
+{
+  "ID_Utilizator": 12,
+  "ID_Serial": "tt0047708",
+  "Data_vizionare": "2023-06-19",
+  "Vazut_complet": true,
+  "Preferat": false
+}
+
+###
+GET http://localhost:3000/api/vizionari/getFalse
+
+###
+GET http://localhost:3000/api/vizionari/getBySerialID/tt0080306
+
+###
+GET http://localhost:3000/api/comentarii
